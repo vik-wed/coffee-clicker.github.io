@@ -113,7 +113,7 @@ function canAffordProducer(data, producerId) {
 
 function updateCPSView(cps) {
   const cpsIndicator = document.getElementById("cps");
-  cpsIndicator.innerText = cps;
+  cpsIndicator.innerText = Math.floor(cps * 100) / 100;
 }
 
 function updatePrice(oldPrice) {
@@ -149,12 +149,13 @@ function buyButtonClick(event, data) {
 }
 
 function tick(data) {
-  data.coffee += data.totalCPS;
-  updateCoffeeView(data.coffee);
-  renderProducers(data);
-  renderUpgrades(data, upgrades);
   //saving state in the tick function = this will result in the state being saved every second because tick is being called on an interval
   saveState(data);
+  data.coffee += data.totalCPS;
+  updateCoffeeView(data.coffee);
+  updateCPSView(data.totalCPS)
+  renderProducers(data);
+  renderUpgrades(data, upgrades);
 }
 
 /*************************
@@ -316,6 +317,7 @@ if (typeof process === "undefined") {
   upgradeContainer.addEventListener("click", (event) => {
     buyUpgradeButtonClick(event, data);
   });
+
 
   // Call the tick function passing in the data object once per second
   setInterval(() => tick(data), 1000);
