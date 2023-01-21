@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+  background-color: #F3EADE;
+  background-image: url('background-img.png');
+  background-size: 300vh;
+  color: #3F2807;
+}
+.column-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  min-width: 650px;
+}
+.column {
+  margin: 10px;
+  margin-top: 0px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  height: calc(100vh - 40px);
+}
+.container.left {
+  margin-top: 25px;
+  margin-left: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.column-header {
+  font-size: 25px;
+  position: relative;
+  background-color: #F3EADE;
+  top: 8px;
+  color: #03846F;
+}
+#big_coffee {
+  user-select: none;
+  font-size: 128px;
+  cursor: pointer;
+}
+
+.counter-container {
+  font-size: 30px;
+  margin: 10px;
+  color: #03846F;
+}
+
+.cps-container {
+  font-size: 20px;
+}
+
+#upgrade-container {
+  padding: 10px;
+  overflow: auto;
+  border: 2px #864F0E solid;
+  border-radius: 5px;
+
+}
+.upgrade {
+  margin-bottom: 5px;
+  padding: 10px;
+  border: 2px solid #F4BB6A;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.upgrade button {
+  font-size: 15px;
+  width: 50px;
+  background-color: #F4BB6A;
+  border: none;
+  margin: 2px 0;
+  font-family: serif;
+  border:1px solid #3F2807;
+}
+
+#producer_container {
+  padding: 10px;
+  overflow: auto;
+  border: 2px #864F0E solid;
+  border-radius: 5px;
+
+}
+
+.producer {
+  margin-bottom: 5px;
+  padding: 10px;
+  border: 2px solid #F4BB6A;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+.producer-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.producer-title {
+  font-size: 20px;
+}
+
+.producer button {
+  font-size: 15px;
+  width: 50px;
+  background-color: #F4BB6A;
+  border: none;
+  margin: 2px 0;
+  font-family: serif;
+  border:1px solid #3F2807;
+}
